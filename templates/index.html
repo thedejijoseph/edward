@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
+  <title>Edith</title>
+</head>
+<body class="bg-dark">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row justify-content-center my-5">
+        <div class="col-md-8">
+          <div class="text-muted">
+            <h1 class="display-4 text-white">Hi there!</h1>
+            <p>So I built this page to get my hands dirty with some APIs; most importantly, though, to see how Kitan David did this thing I saw on his website.</p>
+            <p>It's currently implemented with server-side rendering, but then again, SPAs is not what this is about.</p>
+            <a href="/about">About</a>
+            <hr class="my-4">
+            <p class="font-weight-bold">Go ahead and click that button below. It's suppposed to add your details to my contact list.</p>
+            <a class="btn btn-primary px-3" href="/connect" role="button">Let's connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="{{ static_url('jquery/jquery.min.js') }}"></script>
+  <script src="{{ static_url('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
