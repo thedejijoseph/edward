@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="1005617809515-bj86pu2n28cb25unoa1h2edaegd7f3v1.apps.googleusercontent.com">
+
   <link rel="stylesheet" href="{{ static_url('bootstrap/css/bootstrap.min.css') }}">
   <title>Edward - Let's Connect</title>
 </head>
@@ -15,6 +18,10 @@
         <div class="col-md-3">
           <p class="display-4 text-white">Yay!</p>
           <p class="text-muted">We linking up. <br>We making awesome.</p>
+
+          <hr class="my-4">
+          <p>Sign in with your Google Account</p>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
           <p class="text-primary"><a href="/">&larr;Home</a></p>
         </div>
         <div class="col-md-5">
@@ -63,6 +70,14 @@
       $('div#feedback').append(feedback);
     });
   });
+
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
   </script>
 </body>
 </html>

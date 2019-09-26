@@ -10,3 +10,6 @@
 
 # ignore virtual env
 venv/
+
+# ignore .vscode
+.vscode/
